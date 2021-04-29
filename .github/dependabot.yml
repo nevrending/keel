@@ -1,0 +1,64 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/ui"
+  schedule:
+    interval: daily
+    time: "19:00"
+  open-pull-requests-limit: 10
+- package-ecosystem: gomod
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "19:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: github.com/aws/aws-sdk-go
+    versions:
+    - 1.38.1
+    - 1.38.10
+    - 1.38.11
+    - 1.38.12
+    - 1.38.13
+    - 1.38.14
+    - 1.38.15
+    - 1.38.16
+    - 1.38.17
+    - 1.38.18
+    - 1.38.19
+    - 1.38.20
+    - 1.38.21
+    - 1.38.22
+    - 1.38.23
+    - 1.38.24
+    - 1.38.25
+    - 1.38.26
+    - 1.38.27
+    - 1.38.28
+    - 1.38.4
+    - 1.38.5
+    - 1.38.7
+    - 1.38.8
+    - 1.38.9
+  - dependency-name: cloud.google.com/go/pubsub
+    versions:
+    - 1.10.1
+    - 1.10.2
+  - dependency-name: google.golang.org/api
+    versions:
+    - 0.42.0
+    - 0.43.0
+    - 0.44.0
+  - dependency-name: google.golang.org/grpc
+    versions:
+    - 1.36.0
+    - 1.36.1
+  - dependency-name: github.com/golang/protobuf
+    versions:
+    - 1.5.1
+  - dependency-name: k8s.io/client-go
+    versions:
+    - 0.20.5
+  - dependency-name: k8s.io/apimachinery
+    versions:
+    - 0.20.5
